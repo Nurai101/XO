@@ -47,3 +47,5 @@ const winningConditions = [
         cells.forEach(cell => cell.textContent = '');
         statusText.textContent = '';
       };
+
+      cells.forEach((cell, index) => cell.addEventListener('click', () => handleCellClick(index)));
