@@ -49,3 +49,4 @@ const winningConditions = [
       };
 
       cells.forEach((cell, index) => cell.addEventListener('click', () => handleCellClick(index)));
+      resetButton.addEventListener('click', resetGame)
