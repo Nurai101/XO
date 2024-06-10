@@ -22,3 +22,5 @@ const winningConditions = [
       return board[a] && board[a] === board[b] && board[a] === board[c]; 
     });
   };
+
+  const handleCellClick = (cellIndex) => {
