@@ -28,7 +28,7 @@ const winningConditions = [
     board[cellIndex] = currentPlayer; 
     document.getElementById(cell-${cellIndex}).textContent = currentPlayer;
     if (checkWin()) {
-        statusText.textContent = Игрок ${currentPlayer} победил!;
+        statusText.textContent = "Игрок ${currentPlayer} победил!";
         gameActive = false; 
       } 
       else if (!board.includes('')) {
@@ -38,3 +38,12 @@ const winningConditions = [
       else {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';  
       }
+    }
+    const resetGame = () => {
+
+        currentPlayer = 'X';
+        gameActive = true;
+        board = Array(9).fill(''); 
+        cells.forEach(cell => cell.textContent = '');
+        statusText.textContent = '';
+      };
