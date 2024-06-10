@@ -15,3 +15,10 @@ const winningConditions = [
     [0, 4, 8],
     [2, 4, 6]
   ];
+
+  const checkWin = () => {  
+    return winningConditions.some(condition => { 
+      const [a, b, c] = condition; 
+      return board[a] && board[a] === board[b] && board[a] === board[c]; 
+    });
+  };
