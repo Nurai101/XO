@@ -24,3 +24,4 @@ const winningConditions = [
   };
 
   const handleCellClick = (cellIndex) => {
+    if (board[cellIndex] !== '' || !gameActive) return;
