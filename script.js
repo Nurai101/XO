@@ -25,3 +25,6 @@ const winningConditions = [
 
   const handleCellClick = (cellIndex) => {
     if (board[cellIndex] !== '' || !gameActive) return;
+    board[cellIndex] = currentPlayer; 
+    document.getElementById(cell-${cellIndex}).textContent = currentPlayer;
+    
