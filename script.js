@@ -27,4 +27,14 @@ const winningConditions = [
     if (board[cellIndex] !== '' || !gameActive) return;
     board[cellIndex] = currentPlayer; 
     document.getElementById(cell-${cellIndex}).textContent = currentPlayer;
-    
+    if (checkWin()) {
+        statusText.textContent = Игрок ${currentPlayer} победил!;
+        gameActive = false; 
+      } 
+      else if (!board.includes('')) {
+        statusText.textContent = 'Ничья!';
+        gameActive = false;
+      } 
+      else {
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';  
+      }
